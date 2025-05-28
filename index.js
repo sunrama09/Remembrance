@@ -14,6 +14,7 @@ length = combined.length;
 let paddedArr = [];
 
 secondtable = document.getElementById("secondTable");
+tryMe = document.getElementById("tryMe");
 
 const findDuplicate = [];
 // First Row..
@@ -86,4 +87,9 @@ function secTable(paddedArr) {
     cell1.innerHTML = paddedArr[1];
     cell2.innerHTML = paddedArr[2];
 
+}
+
+function refreshRows() {
+    // Refresh the page by replacing the URL with itself
+    location.replace(location.href);
 }
