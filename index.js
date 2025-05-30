@@ -29,7 +29,7 @@ for (let i = 1; i <= 3; i++) {
         continue;
     }
 
-    padded = combined[index].padEnd(15, ".");
+    padded = combined[index].padEnd(15, " ");
     paddedArr[i - 1] = padded;
 
 }
@@ -47,7 +47,7 @@ for (let i = 1; i <= 3; i++) {
         continue;
     }
 
-    padded = combined[index].padEnd(15, ".");
+    padded = combined[index].padEnd(15, " ");
     //  display2Id.textContent += padded;
     paddedArr[i - 1] = padded;
 
@@ -66,7 +66,7 @@ for (let i = 1; i <= 3; i++) {
         continue;
     }
     ///
-    padded = combined[index].padEnd(15, ".");
+    padded = combined[index].padEnd(15, " ");
     //   display3Id.textContent += padded;
     paddedArr[i - 1] = padded;
 

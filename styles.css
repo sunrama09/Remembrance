@@ -1,10 +1,33 @@
 table,
 th,
 td {
-  border: 1px solid;
-
+  border: 2px solid;
+  text-decoration-style: solid;
+  text-decoration-color: red;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 100;
 }
+
 
 p.a {
   text-align: center;
+  color: red;
+  font-size: x-large;
+
+}
+
+p.b {
+  text-align: left;
+  color: red;
+  font-size: large;
+
+}
+
+button {
+  padding: 10px;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+
 }
