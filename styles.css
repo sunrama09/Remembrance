@@ -9,6 +9,13 @@ td {
   font-weight: 100;
 }
 
+.red-text {
+  color: red;
+}
+
+.blue-text {
+  color: blue;
+}
 
 p.a {
   text-align: center;
@@ -30,4 +37,28 @@ button {
   background-color: blue;
   border-radius: 5px;
 
+}
+
+
+
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.selected {
+  background-color: yellow;
+
+}
+
+.notSelected {
+  background-color: white;
 }

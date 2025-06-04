@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--  Remembrance with clock available in c drive 
+  dated 3-6-25 . This will be taken for further development
+  4-6-25
+  Combined Remembrance and cellClick2 in the new Folder 'FINAL'.
+  -->
 
 <head>
   <meta charset="UTF-8">
@@ -10,24 +15,36 @@
 
 
 <body>
+  <!-- This is from first display of random items-->
   <p class="a"> <b>REMEMBRANCE QUIZ</b></p>
 
+  <p class="b" style="color: red;"> TRY TO REMEMBER AND RECALL THE FOLLOWING ITEMS AFTER TWO MINUTES !</p>
 
   <table id='secondTable' style="width:100%">
-
   </table><br>
-  <p class="b" style="color: red;"> TRY TO RECOLLECT THE ABOVE ITEMS AFTER 4-5 MINUTES !</p><br><br>
 
-  <p> <mark><b>EXCELLANT</b></mark>- IF YOU REMEMBER ALL THE 9 ITEMS!<br><br> <mark><b>GOOD</b></mark> - IF YOU REMEMBER
-    6
-    ITEMS AND
-    ABOVE
-    !<br><br><mark><b>OK</b></mark> - IF
-    YOU
-    REMEMBER 3 ITEMS AND ABOVE ! </p><br>
-  <button onclick="refreshRows()">TRY AGAIN !</button><br><br>
-  <p class="a"> ------------------</p>
+  <div id="timer"></div><br>
+
+  <table id="myTable">
+  </table><br><br>
+  <br>
+
+  <button type="button" id="assessMe" onclick="assessMe()">ASSESS ME</button>
+
+  <p id="result">Result: result</p>
+  <!--
+  <button type="button" onclick="refreshRows()">TRY AGAIN !</button><br><br>
+-->
+  <!-- End of display of Random Items -->
+  <!--  display for recall selection-->
+  <table id="myTable">
+  </table><br><br>
+
+  <!--  End of recall selection-->
+
   <script src="index.js"></script>
+  <script src="index2.js"></script>
+
 </body>
 
 </html>

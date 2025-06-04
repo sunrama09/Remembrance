@@ -1,0 +1,11 @@
+2-6-25
+CELLSELECT2 - index.html is split into index2.html and index2.js
+
+combined cellselect2 and remembrance
+
+to be done
+
+remove 'assess me' button
+
+
+

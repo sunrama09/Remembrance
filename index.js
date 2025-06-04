@@ -14,8 +14,9 @@ length = combined.length;
 let paddedArr = [];
 
 secondtable = document.getElementById("secondTable");
-tryMe = document.getElementById("tryMe");
-
+//tryMe = document.getElementById("tryMe");
+// keep the 'Assess Me'button disabled
+document.getElementById("assessMe").disabled = true
 const findDuplicate = [];
 // First Row..
 for (let i = 1; i <= 3; i++) {
@@ -88,8 +89,49 @@ function secTable(paddedArr) {
     cell2.innerHTML = paddedArr[2];
 
 }
-
+/*
 function refreshRows() {
     // Refresh the page by replacing the URL with itself
     location.replace(location.href);
+}
+    */
+// Add a timer for 5 minutes...
+function startTimer() {
+    let duration = 0.1 * 60; // 5 minutes in seconds
+    const timerDisplay = document.getElementById('timer');
+    const audio = new Audio('chime.mp3'); // Replace 'chime.mp3' with your chime file
+
+    function updateTimer() {
+        const minutes = Math.floor(duration / 60);
+        const seconds = duration % 60;
+        timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+        if (duration <= 0) {
+            clearInterval(timerInterval);
+            changeColor();
+            populateTable();
+            //    audio.play();
+
+            timerDisplay.textContent = "SELECT FROM THE FOLLOWING TABLE!";
+        } else {
+            duration--;
+        }
+    }
+
+    updateTimer(); // Initial call
+    const timerInterval = setInterval(updateTimer, 1000);
+
+}
+
+startTimer();
+
+function changeColor() {
+    ////////////////////////////////////
+    // Example using document.querySelectorAll()
+    const allCells = document.querySelectorAll("table td");
+    allCells.forEach(cell => {
+        cell.style.color = "red"; // Change all cell text colors to blue
+    });
+
+    /////////////////////////////////////
 }
