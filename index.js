@@ -99,7 +99,8 @@ function refreshRows() {
 function startTimer() {
     let duration = 0.1 * 60; // 5 minutes in seconds
     const timerDisplay = document.getElementById('timer');
-    const audio = new Audio('chime.mp3'); // Replace 'chime.mp3' with your chime file
+    timerDisplay.style.textAlign = "center";
+    //   const audio = new Audio('chime.mp3'); // Replace 'chime.mp3' with your chime file
 
     function updateTimer() {
         const minutes = Math.floor(duration / 60);
@@ -111,8 +112,8 @@ function startTimer() {
             changeColor();
             populateTable();
             //    audio.play();
-
-            timerDisplay.textContent = "SELECT FROM THE FOLLOWING TABLE!";
+            //   timerDisplay.style.textAlign = "center";
+            timerDisplay.textContent = "SELECT ITEMS FROM THE FOLLOWING TABLE!";
         } else {
             duration--;
         }
@@ -130,7 +131,7 @@ function changeColor() {
     // Example using document.querySelectorAll()
     const allCells = document.querySelectorAll("table td");
     allCells.forEach(cell => {
-        cell.style.color = "red"; // Change all cell text colors to blue
+        cell.style.color = "white"; // Change all cell text colors to blue
     });
 
     /////////////////////////////////////

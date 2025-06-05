@@ -7,6 +7,7 @@ td {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 100;
+
 }
 
 .red-text {
@@ -25,10 +26,14 @@ p.a {
 }
 
 p.b {
-  text-align: left;
+  text-align: center;
   color: red;
   font-size: large;
 
+}
+
+.myDiv {
+  text-align: center;
 }
 
 button {
@@ -36,7 +41,7 @@ button {
   color: white;
   background-color: blue;
   border-radius: 5px;
-
+  text-align: center;
 }
 
 
@@ -45,6 +50,7 @@ button {
 table {
   border-collapse: collapse;
   width: 50%;
+
 }
 
 th,

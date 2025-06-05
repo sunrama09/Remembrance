@@ -60,8 +60,9 @@ function assessMe() {
   // first array -flowers
   // second array - selectedList
   // Find matches
-  const matches = findMatches(flowers, selectedList);
+  const matches = findMatches(combined, selectedList);
   console.log(matches);
+  console.log(matches.length);
   if (matches.length >= 9) {
     // excellant
     result.textContent = 'Excellant';
@@ -90,7 +91,7 @@ function assessFn() {
 function myFunction(event) {
 
   let target = event.target;
-  if (target.tagName === "TD" && !(target.classList == 'selected') && (selectedList.length < 3)) {
+  if (target.tagName === "TD" && !(target.classList == 'selected') && (selectedList.length < 9)) {
     //  document.querySelectorAll(".selected").forEach
     //    (cell => cell.classList.remove("selected"));
     target.classList.add("selected");
