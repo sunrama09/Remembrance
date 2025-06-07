@@ -11,7 +11,11 @@ length = combined.length;
 //let paddedArr = [];
 
 function populateTable() {
-  document.getElementById("assessMe").disabled = false;
+  // document.getElementById("assessMe").disabled = false;
+  document.getElementById("assessMe").style.display = 'block';
+  /////////////////////////////
+
+  ////////////////////////////////
   //  const table = document.getElementById('myTable');
   table.innerHTML = ''; // Clear existing content
 
@@ -32,44 +36,39 @@ function populateTable() {
   // Enable the button to 'assess'
   //document.getElementById("assessMe").style.display = true;
   /*
-  const newButton = document.createElement('button');
-  newButton.textContent = 'Click me!';
-  document.body.appendChild(newButton);
-  newButton.addEventListener('click', assessMe);
-*/
+    const newButton = document.createElement('button');
+    newButton.textContent = 'One More!';
+    document.body.appendChild(newButton);
+    newButton.addEventListener('click', toggle(newButton));
+  */
 };
-////
 
 
-
-//populateTable();
-///////////////////////////////////
 
 const myCell = document.getElementById('myCell');
 // do the following till the selectedList Array selects 9 items
 
 console.log(selectedList.length);
 
-
-
 document.getElementById("myTable").addEventListener("click", myFunction);
 
 function assessMe() {
-  console.log("I am inside AssessMe");
+  // console.log("I am inside AssessMe");
   document.getElementById("myTable").removeEventListener("click", myFunction);
   // first array -flowers
   // second array - selectedList
   // Find matches
-  const matches = findMatches(combined, selectedList);
+  const matches = findMatches(secTableContent, selectedList);
+  console.log(selectedList);
   console.log(matches);
   console.log(matches.length);
   if (matches.length >= 9) {
     // excellant
-    result.textContent = 'Excellant';
+    result.textContent = `Excellant:` + matches.length + '/9';
   } else if (matches.length >= 6) {
-    result.textContent = 'Very Good';
+    result.textContent = `Very Good:` + matches.length + '/9';
   } else {
-    result.textContent = 'Ok';
+    result.textContent = `OK: ` + matches.length + '/9';
   }
   // compare with table items.
   // for loop,

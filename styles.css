@@ -42,6 +42,7 @@ button {
   background-color: blue;
   border-radius: 5px;
   text-align: center;
+  visibility: visible;
 }
 
 
@@ -67,4 +68,15 @@ td {
 
 .notSelected {
   background-color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  /* Aligns elements side by side */
+  align-items: center;
+  width: 15%;
+  margin: auto;
+  border: 2px solid white;
+  padding: 20px;
 }

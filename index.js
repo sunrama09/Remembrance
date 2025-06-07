@@ -12,11 +12,13 @@ let combined = [...fruits, ...vegs, ...flowers];
 combined.sort();
 length = combined.length;
 let paddedArr = [];
+let secTableContent = [];
 
 secondtable = document.getElementById("secondTable");
 //tryMe = document.getElementById("tryMe");
 // keep the 'Assess Me'button disabled
-document.getElementById("assessMe").disabled = true
+document.getElementById("assessMe").style.display = 'none';
+//document.getElementById("assessMe").disabled = true
 const findDuplicate = [];
 // First Row..
 for (let i = 1; i <= 3; i++) {
@@ -24,7 +26,9 @@ for (let i = 1; i <= 3; i++) {
     //    temp += combined[index] + ' ' +`\n`;
     if (!findDuplicate.includes(combined[index])) {
         findDuplicate.push(combined[index]);
-
+        //// Adding to secondTable content
+        secTableContent.push(combined[index]);
+        ////
     } else {
         i = i - 1;
         continue;
@@ -42,6 +46,9 @@ for (let i = 1; i <= 3; i++) {
     /// test for duplicate
     if (!findDuplicate.includes(combined[index])) {
         findDuplicate.push(combined[index]);
+        //// Adding to secondTable content
+        secTableContent.push(combined[index]);
+        ////
         //    console.log(findDuplicate);
     } else {
         i = i - 1;
@@ -61,6 +68,9 @@ for (let i = 1; i <= 3; i++) {
     /// test for duplicate
     if (!findDuplicate.includes(combined[index])) {
         findDuplicate.push(combined[index]);
+        //// Adding to secondTable content
+        secTableContent.push(combined[index]);
+        ////
         //  console.log(findDuplicate);
     } else {
         i = i - 1;
@@ -75,7 +85,7 @@ for (let i = 1; i <= 3; i++) {
 
 secTable(paddedArr);
 ////////////////////////
-
+console.log(secTableContent);
 function secTable(paddedArr) {
     //  len = paddedArr.length;
 
@@ -97,7 +107,7 @@ function refreshRows() {
     */
 // Add a timer for 5 minutes...
 function startTimer() {
-    let duration = 0.1 * 60; // 5 minutes in seconds
+    let duration = 0.3 * 60; // 5 minutes in seconds
     const timerDisplay = document.getElementById('timer');
     timerDisplay.style.textAlign = "center";
     //   const audio = new Audio('chime.mp3'); // Replace 'chime.mp3' with your chime file
@@ -105,7 +115,8 @@ function startTimer() {
     function updateTimer() {
         const minutes = Math.floor(duration / 60);
         const seconds = duration % 60;
-        timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        //timerDisplay.textContent.
+        timerDisplay.textContent = `TIME REMAINING:  ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 
         if (duration <= 0) {
             clearInterval(timerInterval);
@@ -113,7 +124,7 @@ function startTimer() {
             populateTable();
             //    audio.play();
             //   timerDisplay.style.textAlign = "center";
-            timerDisplay.textContent = "SELECT ITEMS FROM THE FOLLOWING TABLE!";
+            timerDisplay.textContent = "START CLICKING THOSE ITEMS FROM THE TABLE BELOW!";
         } else {
             duration--;
         }

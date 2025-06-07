@@ -18,23 +18,27 @@
   <!-- This is from first display of random items-->
   <p class="a"> <b>REMEMBRANCE QUIZ</b></p>
 
-  <p class="b" style="color: red" center" ;> TRY TO REMEMBER AND RECALL THE FOLLOWING ITEMS AFTER
-    TWO MINUTES !</p>
+  <p class="b" style="color: red" center" ;> TRY TO REMEMBER AND RECALL THE FOLLOWING ITEMS !</p>
 
   <table id='secondTable' align="center" style="width:50%">
   </table><br>
 
 
-  <div id="timer"></div><br>
+  <div id="timer" style=" font-size: larger; color: darkred ;"></div><br>
 
   <table id="myTable" align="center">
   </table><br><br>
   <br>
-  <div class="myDiv">
-    <button type="button" id="assessMe" onclick="assessMe()">ASSESS ME</button>
-  </div>
-  <div class="myDiv">
-    <p id="result">Result: </p>
+
+
+  <div class="container">
+
+    <div class="myDiv">
+      <button type="button" id="assessMe" onclick="assessMe()">ASSESS ME</button>
+    </div>
+    <div class="myDiv">
+      <p id="result" style="font-size: larger; color: darkred;"> </p>
+    </div>
   </div>
   <!--
   <button type="button" onclick="refreshRows()">TRY AGAIN !</button><br><br>

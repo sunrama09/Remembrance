@@ -10,7 +10,7 @@ remove 'assess me' button
 4-6-25
 TBD
 It is working only in Chrome and firefox and not in BRAVE browser. what to do?
-Make all the items centered.
+Make all the items centered.-done
 Table size 50% - done.
 selection- make it 9.
 color from Red to White
